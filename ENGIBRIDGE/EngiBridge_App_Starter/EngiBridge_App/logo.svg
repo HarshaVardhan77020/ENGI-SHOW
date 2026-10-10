@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+<title id="title">EngiBridge logo</title>
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0f9f91"/></linearGradient></defs>
+<path d="M22 44 80 15l58 29-58 28z" fill="#102a56"/><path d="M42 51v21c0 13 17 23 38 23s38-10 38-23V51L80 70z" fill="#2563eb"/>
+<path d="M27 108a53 53 0 0 1 106 0l-20-9-13 14-20-7-20 7-13-14z" fill="url(#b)"/>
+<circle cx="80" cy="89" r="18" fill="#fff"/><path d="M54 126c2-18 13-28 26-28s24 10 26 28" fill="#102a56"/>
+<path d="M19 130h122l-14 13H33z" fill="#0f9f91"/><path d="M138 43v27" stroke="#f6b93b" stroke-width="4" stroke-linecap="round"/><circle cx="138" cy="74" r="6" fill="#f6b93b"/>
+</svg>

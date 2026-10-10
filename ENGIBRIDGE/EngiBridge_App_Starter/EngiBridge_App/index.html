@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102a56" />
+  <title>EngiBridge | Learn • Grow • Get Placed</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="EngiBridge home">
+      <img src="logo.svg" alt="EngiBridge logo" />
+      <span><b>EngiBridge</b><small>Learn • Grow • Get Placed</small></span>
+    </a>
+    <button class="outline-btn" id="logoutBtn" hidden>Log out</button>
+  </header>
+
+  <main>
+    <section id="loginView" class="login-layout">
+      <div class="welcome-panel">
+        <div class="big-logo"><img src="logo.svg" alt="" /></div>
+        <p class="eyebrow">YOUR FUTURE STARTS HERE</p>
+        <h1>Engineering education, <span>within reach.</span></h1>
+        <p>Learn at your own pace, practise your skills, track your progress, and prepare for your career—even with limited resources.</p>
+        <div class="mini-points"><span>✓ All branches</span><span>✓ Year-wise syllabus</span><span>✓ Career support</span></div>
+      </div>
+      <div class="login-card">
+        <h2>Join EngiBridge</h2>
+        <p class="muted">Create your student profile to explore the demo.</p>
+        <form id="loginForm">
+          <label for="studentName">Your name</label>
+          <input id="studentName" placeholder="Enter your name" required />
+          <label for="mobile">Mobile number</label>
+          <div class="phone-input"><span>+91</span><input id="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" required pattern="[0-9]{10}" /></div>
+          <label for="email">Email address</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+          <label for="branch">Engineering branch</label>
+          <select id="branch" required>
+            <option value="">Select your branch</option>
+            <option>Computer Science and Engineering (CSE)</option>
+            <option>Information Technology (IT)</option>
+            <option>Electronics and Communication (ECE)</option>
+            <option>Electrical and Electronics (EEE)</option>
+            <option>Mechanical Engineering</option>
+            <option>Civil Engineering</option>
+            <option>Chemical Engineering</option>
+            <option>Biotechnology</option>
+            <option>Artificial Intelligence and Data Science</option>
+            <option>Other Engineering Branch</option>
+          </select>
+          <label for="year">Current year</label>
+          <select id="year" required>
+            <option value="">Select year</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option>
+          </select>
+          <button class="primary-btn full" type="submit">Continue with demo OTP</button>
+        </form>
+        <p class="tiny-note">Demo only: this prototype does not send a real SMS or verify a real OTP.</p>
+      </div>
+    </section>
+
+    <section id="otpView" class="otp-card" hidden>
+      <div class="round-icon">✉</div><h2>Verify your mobile</h2>
+      <p class="muted">A real app would send a one-time password to your phone. For this demo, enter <b>123456</b>.</p>
+      <form id="otpForm"><label for="otp">6-digit demo OTP</label><input id="otp" inputmode="numeric" maxlength="6" placeholder="123456" required /><button class="primary-btn full">Verify and open dashboard</button></form>
+      <button class="text-btn" id="backBtn">Back to profile</button>
+    </section>
+
+    <section id="dashboardView" hidden>
+      <div class="dashboard-heading">
+        <div><p class="eyebrow">STUDENT DASHBOARD</p><h1>Hello, <span id="helloName">Student</span> 👋</h1><p class="muted" id="studentMeta"></p></div>
+        <div class="progress-ring"><strong id="progressPercent">72%</strong><small>Learning progress</small></div>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="stat-icon blue">✓</span><div><small>Attendance</small><h3 id="attendanceValue">82%</h3></div></article>
+        <article class="stat-card"><span class="stat-icon purple">★</span><div><small>Quiz average</small><h3 id="quizValue">76%</h3></div></article>
+        <article class="stat-card"><span class="stat-icon orange">⚙</span><div><small>Practicals</small><h3 id="practicalValue">68%</h3></div></article>
+      </div>
+
+      <div class="section-heading"><div><h2>Your learning space</h2><p class="muted">Choose a module to begin.</p></div><select id="subjectYear" aria-label="Learning year"><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option></select></div>
+      <div id="moduleGrid" class="module-grid"></div>
+
+      <div class="section-heading"><div><h2>Career & certification</h2><p class="muted">Build evidence of your learning and get ready for opportunities.</p></div></div>
+      <div class="career-grid">
+        <article class="career-card"><div class="career-icon">🚀</div><h3>Career preparation</h3><p>Practise interview questions, improve soft skills, and showcase projects.</p><button class="secondary-btn" data-module="Interview Preparation">Explore preparation</button></article>
+        <article class="career-card"><div class="career-icon">🏅</div><h3>Performance certificate</h3><p>Your future certificate can use verified quiz, attendance, and practical records.</p><button class="secondary-btn" data-module="Certificate">View certificate rules</button></article>
+        <article class="career-card"><div class="career-icon">🤝</div><h3>Company connections</h3><p>Discover internships and jobs when verified company partners are connected.</p><button class="secondary-btn" data-module="Career & Jobs">Explore careers</button></article>
+      </div>
+      <p class="disclaimer">Prototype notice: attendance, scores, certificates, and company opportunities shown here are sample data. A production app needs a secure backend, verified content, real OTP provider, and approved company partnerships.</p>
+    </section>
+  </main>
+
+  <footer><span>© 2026 EngiBridge</span><span>Learn today. Build tomorrow.</span></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
